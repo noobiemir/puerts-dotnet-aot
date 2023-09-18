@@ -1,0 +1,9 @@
+﻿<linker>
+	<assembly fullname="ConsoleAot">
+		<type fullname="WrapperGenConfig" />
+		<type fullname="ConsoleAot.ScriptLoader" />
+	</assembly>
+	<!--<assembly fullname="System.Console">
+		<type fullname="System.Console" />
+	</assembly>-->
+</linker>

@@ -1,0 +1,166 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<DefineConstants>$(DefineConstants);PUERTS_GENERAL;DISABLE_AUTO_REGISTER;THREAD_SAFE;</DefineConstants>
+		<NoWarn>$(NoWarn);CS0168;CS0414;CS0436;CS1591;CS8034;CS8600;CS8601;CS8602;CS8603;CS8604;CS8605;CS8618;CS8619;CS8620;CS8622;CS8625;CS8765;CS8767;</NoWarn>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Editor\Src\CJSImporter.cs">
+			<Link>Editor\Src\CJSImporter.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Editor\Src\Configure.cs">
+			<Link>Editor\Src\Configure.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Editor\Src\DocResolver.cs">
+			<Link>Editor\Src\DocResolver.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Editor\Src\Generator\DTS.cs">
+			<Link>Editor\Src\Generator\DTS.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Editor\Src\Generator\FAQHelper.cs">
+			<Link>Editor\Src\Generator\FAQHelper.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Editor\Src\Generator\FileExporter.cs">
+			<Link>Editor\Src\Generator\FileExporter.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Editor\Src\Generator\IL2Cpp\FileExporter.cs">
+			<Link>Editor\Src\Generator\IL2Cpp\FileExporter.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Editor\Src\Generator\IL2Cpp\InstructionsFilter.cs">
+			<Link>Editor\Src\Generator\IL2Cpp\InstructionsFilter.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Editor\Src\Generator\IL2Cpp\UnityMenu.cs">
+			<Link>Editor\Src\Generator\IL2Cpp\UnityMenu.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Editor\Src\Generator\RegisterInfo.cs">
+			<Link>Editor\Src\Generator\RegisterInfo.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Editor\Src\Generator\UnityMenu.cs">
+			<Link>Editor\Src\Generator\UnityMenu.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Editor\Src\Generator\Utils.cs">
+			<Link>Editor\Src\Generator\Utils.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Editor\Src\Generator\Wrapper.cs">
+			<Link>Editor\Src\Generator\Wrapper.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Editor\Src\MJSImporter.cs">
+			<Link>Editor\Src\MJSImporter.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Editor\Src\U2018Compatible.cs">
+			<Link>Editor\Src\U2018Compatible.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Editor\Src\UnityNodeJS.cs">
+			<Link>Editor\Src\UnityNodeJS.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Runtime\Src\ArrayBuffer.cs">
+			<Link>Runtime\Src\ArrayBuffer.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Runtime\Src\Backend.cs">
+			<Link>Runtime\Src\Backend.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Runtime\Src\Default\JsEnv.cs">
+			<Link>Runtime\Src\Default\JsEnv.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Runtime\Src\Default\JSType\GenericDelegate.cs">
+			<Link>Runtime\Src\Default\JSType\GenericDelegate.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Runtime\Src\Default\JSType\JSObject.cs">
+			<Link>Runtime\Src\Default\JSType\JSObject.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Runtime\Src\Default\Native\PuertsDLL.cs">
+			<Link>Runtime\Src\Default\Native\PuertsDLL.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Runtime\Src\Default\Native\StaticCallbacks.cs">
+			<Link>Runtime\Src\Default\Native\StaticCallbacks.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Runtime\Src\Default\Translator\ArgumentHelper.cs">
+			<Link>Runtime\Src\Default\Translator\ArgumentHelper.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Runtime\Src\Default\Translator\DataTranslate.cs">
+			<Link>Runtime\Src\Default\Translator\DataTranslate.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Runtime\Src\Default\Translator\NativeValueApiGeneric.cs">
+			<Link>Runtime\Src\Default\Translator\NativeValueApiGeneric.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Runtime\Src\Default\Translator\ObjectPool.cs">
+			<Link>Runtime\Src\Default\Translator\ObjectPool.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Runtime\Src\Default\Translator\StaticTranslate.cs">
+			<Link>Runtime\Src\Default\Translator\StaticTranslate.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Runtime\Src\Default\TypeExtensions.cs">
+			<Link>Runtime\Src\Default\TypeExtensions.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Runtime\Src\Default\TypeMapping\TypeManager.cs">
+			<Link>Runtime\Src\Default\TypeMapping\TypeManager.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Runtime\Src\Default\TypeMapping\TypeRegister.cs">
+			<Link>Runtime\Src\Default\TypeMapping\TypeRegister.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Runtime\Src\Default\Utils.cs">
+			<Link>Runtime\Src\Default\Utils.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Runtime\Src\Default\Wrapper\GenericMethodWrap.cs">
+			<Link>Runtime\Src\Default\Wrapper\GenericMethodWrap.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Runtime\Src\Default\Wrapper\LazyWrap.cs">
+			<Link>Runtime\Src\Default\Wrapper\LazyWrap.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Runtime\Src\Default\Wrapper\ReflectionWrap.cs">
+			<Link>Runtime\Src\Default\Wrapper\ReflectionWrap.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Runtime\Src\Default\Wrapper\StaticWrapRegister.cs">
+			<Link>Runtime\Src\Default\Wrapper\StaticWrapRegister.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Runtime\Src\IL2Cpp\ArrayExtension.cs">
+			<Link>Runtime\Src\IL2Cpp\ArrayExtension.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Runtime\Src\IL2Cpp\ExtensionMethodInfos_Gen_Internal.cs">
+			<Link>Runtime\Src\IL2Cpp\ExtensionMethodInfos_Gen_Internal.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Runtime\Src\IL2Cpp\JsEnv.cs">
+			<Link>Runtime\Src\IL2Cpp\JsEnv.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Runtime\Src\IL2Cpp\JSType\JSObject.cs">
+			<Link>Runtime\Src\IL2Cpp\JSType\JSObject.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Runtime\Src\IL2Cpp\Native\NativeAPI.cs">
+			<Link>Runtime\Src\IL2Cpp\Native\NativeAPI.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Runtime\Src\IL2Cpp\ObjectPool.cs">
+			<Link>Runtime\Src\IL2Cpp\ObjectPool.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Runtime\Src\IL2Cpp\TypeRegister.cs">
+			<Link>Runtime\Src\IL2Cpp\TypeRegister.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Runtime\Src\IL2Cpp\TypeUtils.cs">
+			<Link>Runtime\Src\IL2Cpp\TypeUtils.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Runtime\Src\Loader.cs">
+			<Link>Runtime\Src\Loader.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Runtime\Src\PathHelper.cs">
+			<Link>Runtime\Src\PathHelper.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Runtime\Src\RegisterInfoManager.cs">
+			<Link>Runtime\Src\RegisterInfoManager.cs</Link>
+		</Compile>
+		<Compile Include="..\..\..\unity\Assets\core\upm\Runtime\Src\TypedValue.cs">
+			<Link>Runtime\Src\TypedValue.cs</Link>
+		</Compile>
+	</ItemGroup>
+
+
+	<ItemGroup>
+		<Compile Include="..\..\..\unity\Assets\commonjs\upm\Runtime\CommonJS.cs">
+			<Link>CommonJS.cs</Link>
+		</Compile>
+	</ItemGroup>
+
+</Project>

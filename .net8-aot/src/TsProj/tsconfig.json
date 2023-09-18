@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "target": "esnext",
+      "module": "ES2015",
+      "jsx": "react",
+      "sourceMap": true,
+      "noImplicitAny": true,
+      "typeRoots": [
+        "./Typing",
+        "../../../unity/Assets/core/upm/Typing",
+        "./node_modules/@types"
+      ],
+      "outDir": "../ConsoleAot/Scripts"
+    }
+  }

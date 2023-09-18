@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<InvariantGlobalization>true</InvariantGlobalization>
+		<IsPackable>false</IsPackable>
+		<PublishAot>true</PublishAot>
+		<IsAotCompatible>true</IsAotCompatible>
+		<DefineConstants>$(DefineConstants);PUERTS_GENERAL;DISABLE_AUTO_REGISTER;</DefineConstants>
+		<NoWarn>$(NoWarn);CS0168;CS0414;CS0436;CS1591;CS8034;CS8600;CS8601;CS8602;CS8603;CS8604;CS8605;CS8618;CS8619;CS8620;CS8622;CS8625;CS8765;CS8767;</NoWarn>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="ILLink.Descriptors.xml" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="ILLink.Descriptors.xml">
+			<LogicalName>ILLink.Descriptors.xml</LogicalName>
+		</EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Scripts\" />
+		<Folder Include="StaticWrapper\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0-rc.1.23419.4" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Puerts.DotNet\Puerts.DotNet.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="Scripts\**\*">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+		</None>
+	</ItemGroup>
+
+</Project>

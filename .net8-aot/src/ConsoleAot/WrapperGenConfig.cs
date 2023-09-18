@@ -42,6 +42,8 @@ public class WrapperGenConfig
         AddBindingTypes(typeof(BaseClassExtension));
         AddBindingTypes(typeof(BaseClass1));
         AddBindingTypes(typeof(DerivedClass1));
+
+        AddBindingTypes(typeof(JsObjectTest));
     }
 
     private static void AddBindingTypes([DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.All)] Type type)

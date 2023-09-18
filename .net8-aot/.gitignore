@@ -399,3 +399,4 @@ FodyWeavers.xsd
 
 src/ConsoleAot/Scripts
 src/ConsoleAot/StaticWrapper
+src/TsProj/Typing

@@ -26,9 +26,11 @@ namespace ConsoleAot
 
             Console.WriteLine(Add3(Add3(1)));
 
-            TsQuickStart.Run(_env);
-
             CsCallJs.Run(_env);
+
+            JsObjectAccess.Run(_env);
+
+            TsQuickStart.Run(_env);
 
             Task.Factory.StartNew(async () =>
             {

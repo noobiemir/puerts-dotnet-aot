@@ -1,5 +1,12 @@
 ﻿using ConsoleAot;
 
+var wrapperPath = ScriptLoader.PathToBinDir("../../../../ConsoleAot/StaticWrapper/");
+
+if (!Directory.Exists(wrapperPath))
+{
+    Directory.CreateDirectory(wrapperPath);
+}
+
 Puerts.Editor.Generator.FileExporter.ExportWrapper(
     ScriptLoader.PathToBinDir("../../../../ConsoleAot/StaticWrapper/"),
     new ScriptLoader()

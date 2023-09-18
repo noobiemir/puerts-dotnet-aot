@@ -7,7 +7,9 @@ declare namespace puer {
 
     function $set<T>(x: CS.$Ref<T>, val: T): void;
 
-    function $promise<T>(x: CS.$Task<T>): Promise<T>;
+    function $promise<T>(x: CS.System.Threading.Tasks.Task$1<T>): Promise<T>;
+
+    function $promise(x: CS.System.Threading.Tasks.Task): Promise<void>;
 
     function $generic<T extends new (...args: any[]) => any>(genericType: T, ...genericArguments: (typeof __Puerts_CSharpEnum | (new (...args: any[]) => any))[]): T;
 

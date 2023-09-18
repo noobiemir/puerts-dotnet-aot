@@ -11,6 +11,10 @@ let obj = new CS.PuertsTest.DerivedClass();
 //实例成员访问
 obj.BMFunc();//父类方法
 obj.DMFunc(CS.PuertsTest.MyEnum.E1);
+const enumTest: number = 1;
+const e2: CS.PuertsTest.MyEnum = enumTest;
+obj.DMFunc(e2);
+
 console.log(obj.BMF, obj.DMF);
 obj.BMF = 10;//父类属性
 obj.DMF = 30;//子类属性

@@ -9,6 +9,10 @@
 		<license type="expression">MIT</license>
 		<projectUrl>https://github.com/Tencent/puerts</projectUrl>
 		<repository type="git" url="https://github.com/Tencent/puerts" />
+		<description>PuerTS for AOT support</description>
+		<copyright>Copyright © 2023 Tencent</copyright>
+		<language>en-US</language>
+		<tags>typescript</tags>
 	</metadata>
 
 	<files>

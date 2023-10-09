@@ -18,9 +18,8 @@
 	<files>
 		<file src="./src/Puerts.DotNet/bin/$configuration$/net8.0/Puerts.DotNet.dll" target="lib/net8.0" />
 		<file src="./src/Puerts.DotNet/bin/$configuration$/netstandard2.1/Puerts.DotNet.dll" target="lib/netstandard2.1" />
-		<file src="./runtimes/x86_64/libpuerts.so" target="runtimes/win-x64/native" />
 		<file src="./runtimes/x86_64/puerts.dll" target="runtimes/win-x64/native" />
-		<file src="./runtimes/x86/libpuerts.so" target="runtimes/win-x86/native" />
 		<file src="./runtimes/x86/puerts.dll" target="runtimes/win-x86/native" />
+		<file src="./runtimes/x86_64/libpuerts.so" target="runtimes/linux-x64/native" />
 	</files>
 </package>

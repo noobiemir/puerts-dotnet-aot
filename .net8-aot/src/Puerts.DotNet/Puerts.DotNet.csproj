@@ -7,7 +7,7 @@
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<DefineConstants>$(DefineConstants);PUERTS_GENERAL;DISABLE_AUTO_REGISTER;THREAD_SAFE;</DefineConstants>
 		<NoWarn>$(NoWarn);CS0168;CS0414;CS0436;CS1591;CS8034;CS8600;CS8601;CS8602;CS8603;CS8604;CS8605;CS8618;CS8619;CS8620;CS8622;CS8625;CS8765;CS8767;</NoWarn>
-		<Version>2.0.2.5</Version>
+		<Version>2.0.2.6</Version>
 		<Authors>Tencent;Noobie Mir</Authors>
 		<Description>PuerTS for AOT support</Description>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>

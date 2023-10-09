@@ -57,15 +57,6 @@ jobs:
         name: Unity_Plugins (v8_9.4_Release)
         path: ./.net8-aot/runtimes/
         
-    - name: Debug
-      run: |
-        for package in $(find -name "*.dll"); do
-          echo file: $package...
-        done
-        for package in $(find -name "*.so"); do
-          echo file: $package...
-        done
-
     - name: Restore Dependencies
       run: dotnet restore ./.net8-aot/src/Puerts.DotNet/Puerts.DotNet.csproj
 

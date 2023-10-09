@@ -1,4 +1,4 @@
-name: dotnet publish (v8 windows)
+name: dotnet publish (v8)
 
 on: 
   workflow_dispatch:

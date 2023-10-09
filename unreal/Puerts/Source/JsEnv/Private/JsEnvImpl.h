@@ -163,8 +163,15 @@ public:
     virtual void Merge(
         v8::Isolate* Isolate, v8::Local<v8::Context> Context, v8::Local<v8::Object> Src, UStruct* DesType, void* Des) override;
 
-    virtual void BindContainer(
-        void* Ptr, v8::Local<v8::Object> JSObject, void (*Callback)(const v8::WeakCallbackInfo<void>& data)) override;
+    enum ContainerType
+    {
+        EArray,
+        EMap,
+        ESet
+    };
+
+    void BindContainer(void* Ptr, v8::Local<v8::Object> JSObject, void (*Callback)(const v8::WeakCallbackInfo<void>& data),
+        bool PassByPointer, ContainerType Type);
 
     virtual void UnBindContainer(void* Ptr) override;
 
@@ -253,7 +260,7 @@ private:
     bool LoadFile(const FString& RequiringDir, const FString& ModuleName, FString& OutPath, FString& OutDebugPath,
         TArray<uint8>& Data, FString& ErrInfo);
 
-    void ExecuteModule(const FString& ModuleName, std::function<FString(const FString&, const FString&)> Preprocessor = nullptr);
+    void ExecuteModule(const FString& ModuleName);
 
     void EvalScript(const v8::FunctionCallbackInfo<v8::Value>& Info);
 
@@ -545,18 +552,16 @@ private:
 
     TMap<void*, FObjectCacheNode> StructCache;
 
-    TMap<void*, v8::UniquePersistent<v8::Value>> ContainerCache;
+    struct ContainerCacheItem
+    {
+        v8::UniquePersistent<v8::Value> Container;
+        bool NeedRelease;
+        ContainerType Type;
+    };
+
+    TMap<void*, ContainerCacheItem> ContainerCache;
 
     FCppObjectMapper CppObjectMapper;
-
-#if !WITH_BACKING_STORE_AUTO_FREE && !defined(HAS_ARRAYBUFFER_NEW_WITHOUT_STL)
-    struct ScriptStructFinalizeInfo
-    {
-        TWeakObjectPtr<UStruct> Struct;
-        FinalizeFunc Finalize;
-    };
-    TMap<void*, ScriptStructFinalizeInfo> ScriptStructFinalizeInfoMap;
-#endif
 
     v8::UniquePersistent<v8::FunctionTemplate> ArrayTemplate;
 

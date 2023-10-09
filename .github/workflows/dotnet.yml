@@ -45,21 +45,16 @@ jobs:
       with:
         name: Unity_Plugins (v8_9.4_Release)
         path: ./.net8-aot/runtimes/
-
-    - name: CD
-      shell: powershell
-      run: |
-        cd .net8-aot
-
+        
     - name: Restore Dependencies
-      run: dotnet restore
+      run: dotnet restore ./.net8-aot/Puerts.DotNet.sln
 
     - name: Build Solution
-      run: 'dotnet build --no-restore --configuration Release -p:Version="${{ github.event.inputs.tag_name }}" -p:InformationalVersion="${{ github.event.inputs.tag_name }}+${{github.sha}}"'
+      run: 'dotnet build ./.net8-aot/Puerts.DotNet.sln --no-restore --configuration Release -p:Version="${{ github.event.inputs.tag_name }}" -p:InformationalVersion="${{ github.event.inputs.tag_name }}+${{github.sha}}"'
       
     - name: Create Packages
       if: success() && github.event_name != 'pull_request'
-      run: 'nuget pack Puerts.DotNet.nuspec -Version "${{ github.event.inputs.tag_name }}" -OutputDirectory "${{env.BUILD_PATH}}" -p Configuration=Release'
+      run: 'nuget pack ./.net8-aot/Puerts.DotNet.nuspec -Version "${{ github.event.inputs.tag_name }}" -OutputDirectory "${{env.BUILD_PATH}}" -p Configuration=Release'
 
     - name: Upload Packages
       if: success() && github.event_name != 'pull_request'

@@ -47,10 +47,10 @@ jobs:
         path: ./.net8-aot/runtimes/
         
     - name: Restore Dependencies
-      run: dotnet restore ./.net8-aot/Puerts.DotNet.sln
+      run: dotnet restore ./.net8-aot/src/Puerts.DotNet/Puerts.DotNet.csproj
 
     - name: Build Solution
-      run: 'dotnet build ./.net8-aot/Puerts.DotNet.sln --no-restore --configuration Release -p:Version="${{ github.event.inputs.tag_name }}" -p:InformationalVersion="${{ github.event.inputs.tag_name }}+${{github.sha}}"'
+      run: 'dotnet build ./.net8-aot/src/Puerts.DotNet/Puerts.DotNet.csproj --no-restore --configuration Release -p:Version="${{ github.event.inputs.tag_name }}" -p:InformationalVersion="${{ github.event.inputs.tag_name }}+${{github.sha}}"'
       
     - name: Create Packages
       if: success() && github.event_name != 'pull_request'

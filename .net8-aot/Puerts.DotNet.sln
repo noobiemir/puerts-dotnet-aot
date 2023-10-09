@@ -7,7 +7,34 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Puerts.DotNet", "src\Puerts
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAot", "src\ConsoleAot\ConsoleAot.csproj", "{902528DF-C7F2-489A-AA24-F56BF435109B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PuertsWrapperGenerator", "src\PuertsWrapperGenerator\PuertsWrapperGenerator.csproj", "{45288155-C65B-4B99-AFFB-16094BF00F5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PuertsWrapperGenerator", "src\PuertsWrapperGenerator\PuertsWrapperGenerator.csproj", "{45288155-C65B-4B99-AFFB-16094BF00F5F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{BA63DA55-050A-4F6C-96CB-5F12BFD92DE8}"
+	ProjectSection(SolutionItems) = preProject
+		..\.github\workflows\clang-format-check.yml = ..\.github\workflows\clang-format-check.yml
+		..\.github\workflows\dotnet.yml = ..\.github\workflows\dotnet.yml
+		Puerts.DotNet.nuspec = Puerts.DotNet.nuspec
+		..\.github\workflows\unity_build_plugins.yml = ..\.github\workflows\unity_build_plugins.yml
+		..\.github\workflows\unity_build_plugins_custom.yml = ..\.github\workflows\unity_build_plugins_custom.yml
+		..\.github\workflows\unity_publish.yml = ..\.github\workflows\unity_publish.yml
+		..\.github\workflows\unity_unittest.yml = ..\.github\workflows\unity_unittest.yml
+		..\.github\workflows\unreal_ci.yml = ..\.github\workflows\unreal_ci.yml
+		..\.github\workflows\unreal_publish.yml = ..\.github\workflows\unreal_publish.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "composites", "composites", "{C1892389-208B-4C12-83D5-370DFAFD23DC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "unity-build-plugins", "unity-build-plugins", "{EF982012-D1BB-4C41-BDEA-CBD6552D080E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "android", "android", "{2E36C667-C87A-43EC-8C88-9DB0DF1ECA57}"
+	ProjectSection(SolutionItems) = preProject
+		..\.github\workflows\composites\unity-build-plugins\android\action.yml = ..\.github\workflows\composites\unity-build-plugins\android\action.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "windows", "windows", "{79FE85FE-2E81-4150-86DF-C50889B86B20}"
+	ProjectSection(SolutionItems) = preProject
+		..\.github\workflows\composites\unity-build-plugins\windows\action.yml = ..\.github\workflows\composites\unity-build-plugins\windows\action.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +57,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C1892389-208B-4C12-83D5-370DFAFD23DC} = {BA63DA55-050A-4F6C-96CB-5F12BFD92DE8}
+		{EF982012-D1BB-4C41-BDEA-CBD6552D080E} = {C1892389-208B-4C12-83D5-370DFAFD23DC}
+		{2E36C667-C87A-43EC-8C88-9DB0DF1ECA57} = {EF982012-D1BB-4C41-BDEA-CBD6552D080E}
+		{79FE85FE-2E81-4150-86DF-C50889B86B20} = {EF982012-D1BB-4C41-BDEA-CBD6552D080E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {15BE5596-FD76-4666-A703-2944B66DBA2B}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+	<metadata>
+		<id>Puerts.DotNet</id>
+		<version>2.0.0</version>
+		<authors>Tencent</authors>
+		<owners>Tencent</owners>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<license type="expression">MIT</license>
+		<projectUrl>https://github.com/Tencent/puerts</projectUrl>
+		<repository type="git" url="https://github.com/Tencent/puerts" />
+	</metadata>
+
+	<files>
+		<file src="./src/Puerts.DotNet/bin/$configuration$/net8.0/Puerts.DotNet.dll" target="lib/net8.0" />
+		<file src="./runtimes/x86_64/libpuerts.so" target="runtimes/win-x64/native" />
+		<file src="./runtimes/x86_64/puerts.dll" target="runtimes/win-x64/native" />
+	</files>
+</package>
